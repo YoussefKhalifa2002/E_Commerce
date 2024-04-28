@@ -2,6 +2,7 @@ import 'package:e_commerce/Components/brands_grid.dart';
 import 'package:e_commerce/Components/card_view.dart';
 import 'package:e_commerce/Components/feature_products.dart';
 import 'package:e_commerce/Components/home_screen_category_top.dart';
+import 'package:e_commerce/Home_Screen/men_category.dart';
 // import 'package:e_commerce/Home_Screen/account.dart';
 // import 'package:e_commerce/Home_Screen/cart.dart';
 // import 'package:e_commerce/Home_Screen/sells.dart';
@@ -97,23 +98,34 @@ class _HomeScreenState extends State<HomeScreen> {
               const SizedBox(
                 height: 25,
               ),
-              const Row(
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  CategoryImage(
-                    imagePass: 'assets/main_screen/men.jpg',
-                    type: 'Men',
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const MenCategory(),
+                        ),
+                      );
+                    },
+                    child: const CategoryImage(
+                      imagePass: 'assets/main_screen/men.jpg',
+                      type: 'Men',
+                    ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 30,
                   ),
-                  CategoryImage(
+                  const CategoryImage(
                     imagePass: 'assets/main_screen/woman.jpg',
                     type: 'women',
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 30,
                   ),
-                  CategoryImage(
+                  const CategoryImage(
                     imagePass: 'assets/main_screen/children.jpg',
                     type: 'children',
                   ),

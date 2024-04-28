@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
-class CategoryImage extends StatelessWidget {
+class MenCategoryImage extends StatelessWidget {
   final String imagePass;
   final String type;
-  const CategoryImage({super.key, required this.imagePass, required this.type});
+  const MenCategoryImage(
+      {super.key, required this.imagePass, required this.type});
 
   @override
   Widget build(BuildContext context) {
@@ -12,8 +13,8 @@ class CategoryImage extends StatelessWidget {
         ClipOval(
           child: Image.asset(
             imagePass,
-            width: 91.4,
-            height: 91.4,
+            width: 64,
+            height: 64,
             fit: BoxFit.cover,
           ),
         ),
