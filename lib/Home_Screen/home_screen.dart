@@ -3,6 +3,8 @@ import 'package:e_commerce/Components/card_view.dart';
 import 'package:e_commerce/Components/feature_products.dart';
 import 'package:e_commerce/Components/home_screen_category_top.dart';
 import 'package:e_commerce/Home_Screen/men_category.dart';
+import 'package:e_commerce/Home_Screen/women_category.dart';
+import 'package:flutter/cupertino.dart';
 // import 'package:e_commerce/Home_Screen/account.dart';
 // import 'package:e_commerce/Home_Screen/cart.dart';
 // import 'package:e_commerce/Home_Screen/sells.dart';
@@ -118,9 +120,19 @@ class _HomeScreenState extends State<HomeScreen> {
                   const SizedBox(
                     width: 30,
                   ),
-                  const CategoryImage(
-                    imagePass: 'assets/main_screen/woman.jpg',
-                    type: 'women',
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const WomenCategory(),
+                        ),
+                      );
+                    },
+                    child: const CategoryImage(
+                      imagePass: 'assets/main_screen/woman.jpg',
+                      type: 'women',
+                    ),
                   ),
                   const SizedBox(
                     width: 30,

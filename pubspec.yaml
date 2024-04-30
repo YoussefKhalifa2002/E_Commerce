@@ -75,6 +75,13 @@ flutter:
     - assets/main_screen/Shemiz.jpg
     - assets/main_screen/Sells.jpg
     - assets/main_screen/T-Shirt.jpg
+    - assets/men_Category/T-Shirt.jpeg
+    - assets/men_Category/T-Shirt-2.jpeg
+    - assets/men_Category/T-Shirt-3.jpeg
+    - assets/men_Category/T-Shirt-4.jpeg
+    - assets/men_Category/T-Shirt-5.jpeg
+    - assets/men_Category/T-Shirt-6.jpeg
+    - assets/men_Category/T-Shirt-7.jpeg
     - assets/Google.png
     - assets/Facebook.png
     - assets/X.png

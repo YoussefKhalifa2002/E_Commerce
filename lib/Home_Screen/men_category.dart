@@ -1,6 +1,10 @@
-import 'package:e_commerce/Components/home_screen_category_top.dart';
+// import 'package:e_commerce/Components/home_screen_category_top.dart';
+import 'package:e_commerce/Components/created_For_You.dart';
 import 'package:e_commerce/Components/men_screen_category_top.dart';
+import 'package:e_commerce/Components/shop_all_container.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 
 class MenCategory extends StatelessWidget {
@@ -118,7 +122,7 @@ class MenCategory extends StatelessWidget {
                     GestureDetector(
                       onTap: () {},
                       child: const MenCategoryImage(
-                        imagePass: 'assets/main_screen/T-Shirt.jpg',
+                        imagePass: 'assets/men_Category/T-Shirt-6.jpeg',
                         type: 'T-Shirt',
                       ),
                     ),
@@ -128,7 +132,7 @@ class MenCategory extends StatelessWidget {
                     GestureDetector(
                       onTap: () {},
                       child: const MenCategoryImage(
-                        imagePass: 'assets/main_screen/T-Shirt.jpg',
+                        imagePass: 'assets/men_Category/T-Shirt-7.jpeg',
                         type: 'T-Shirt',
                       ),
                     ),
@@ -138,7 +142,7 @@ class MenCategory extends StatelessWidget {
                     GestureDetector(
                       onTap: () {},
                       child: const MenCategoryImage(
-                        imagePass: 'assets/main_screen/T-Shirt.jpg',
+                        imagePass: 'assets/men_Category/T-Shirt-6.jpeg',
                         type: 'T-Shirt',
                       ),
                     ),
@@ -148,7 +152,7 @@ class MenCategory extends StatelessWidget {
                     GestureDetector(
                       onTap: () {},
                       child: const MenCategoryImage(
-                        imagePass: 'assets/main_screen/T-Shirt.jpg',
+                        imagePass: 'assets/men_Category/T-Shirt-7.jpeg',
                         type: 'T-Shirt',
                       ),
                     ),
@@ -201,68 +205,44 @@ class MenCategory extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      GestureDetector(
-                        onTap: () => {},
-                        child: const ClipRRect(
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(12),
-                          ),
-                          child: Image(
-                            width: 174,
-                            height: 201,
-                            image: AssetImage('assets/main_screen/T-Shirt.jpg'),
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                      ),
-                      const Text(
-                        'T-Shirt',
-                        style: TextStyle(
-                            fontSize: 17.3, fontWeight: FontWeight.w500),
-                      ),
-                      const Text(
-                        '250',
-                        style: TextStyle(
-                            fontSize: 16.3, fontWeight: FontWeight.w700),
-                      ),
-                    ],
-                  ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      GestureDetector(
-                        onTap: () => {},
-                        child: const ClipRRect(
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(12),
-                          ),
-                          child: Image(
-                            width: 174,
-                            height: 201,
-                            image: AssetImage('assets/main_screen/T-Shirt.jpg'),
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                      ),
-                      const Text(
-                        'T-Shirt',
-                        style: TextStyle(
-                            fontSize: 17.3, fontWeight: FontWeight.w500),
-                      ),
-                      const Text(
-                        '250',
-                        style: TextStyle(
-                            fontSize: 16.3, fontWeight: FontWeight.w700),
-                      ),
-                    ],
-                  ),
-                ],
+              const SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    CreatedForYou(
+                      itemName: 'T-Shirt',
+                      itemPrice: '250',
+                      imageName: 'assets/men_Category/T-Shirt.jpeg',
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    CreatedForYou(
+                      itemName: 'T-Shirt',
+                      itemPrice: '250',
+                      imageName: 'assets/men_Category/T-Shirt-2.jpeg',
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    CreatedForYou(
+                      itemName: 'T-Shirt',
+                      itemPrice: '250',
+                      imageName: 'assets/men_Category/T-Shirt-3.jpeg',
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    CreatedForYou(
+                      itemName: 'T-Shirt',
+                      itemPrice: '250',
+                      imageName: 'assets/main_screen/T-Shirt.jpg',
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                  ],
+                ),
               ),
               const SizedBox(
                 height: 15,
@@ -272,11 +252,11 @@ class MenCategory extends StatelessWidget {
                 children: [
                   Container(
                     height: 1.0,
-                    width: 70.0,
+                    width: 125,
                     color: const Color.fromRGBO(23, 78, 73, 1),
                   ),
                   const Text(
-                    'SHOP ALL CATEGORIES',
+                    'SHOP ALL',
                     style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.w300,
@@ -285,10 +265,37 @@ class MenCategory extends StatelessWidget {
                   ),
                   Container(
                     height: 1.0,
-                    width: 70.0,
+                    width: 125,
                     color: const Color.fromRGBO(23, 78, 73, 1),
                   ),
                 ],
+              ),
+              const SizedBox(
+                height: 15,
+              ),
+              const ShopAllContainer(
+                imageName: 'assets/men_Category/T-Shirt-4.jpeg',
+                itemName: 'Shemiz',
+                itemPrice: '250',
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              const ShopAllContainer(
+                imageName: 'assets/men_Category/T-Shirt-5.jpeg',
+                itemName: 'Shemiz',
+                itemPrice: '250',
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              const ShopAllContainer(
+                imageName: 'assets/men_Category/T-Shirt-4.jpeg',
+                itemName: 'Shemiz',
+                itemPrice: '250',
+              ),
+              const SizedBox(
+                height: 20,
               ),
             ],
           ),

@@ -1,5 +1,6 @@
 import 'package:e_commerce/Components/navigation_bar_bottom.dart';
 import 'package:e_commerce/Home_Screen/men_category.dart';
+import 'package:e_commerce/Home_Screen/women_category.dart';
 import 'package:e_commerce/LogIn_SignUp_Pages/create_new_password.dart';
 import 'package:e_commerce/LogIn_SignUp_Pages/forgot_password.dart';
 import 'package:e_commerce/LogIn_SignUp_Pages/get_started_screen.dart';
@@ -38,6 +39,7 @@ class MyApp extends StatelessWidget {
         HomeScreen.routeName: (context) => const HomeScreen(),
         NavigationBarBottom.routeName: (context) => const NavigationBarBottom(),
         MenCategory.routeName: (context) => const MenCategory(),
+        WomenCategory.routeName: (context) => const WomenCategory(),
       },
     );
   }
